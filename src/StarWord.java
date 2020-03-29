@@ -1,7 +1,7 @@
 
 public class StarWord {
 	
-	//Java StringBuffer clas is used to create mutable (modifiable) string.
+	//Java StringBuffer class is used to create mutable (modifiable) string.
 	//Lets say you typed something in Scanner, and you want to change in, so
 	//StringBuffer classes are used for creating mutable/changeable string.
 

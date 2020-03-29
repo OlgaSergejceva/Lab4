@@ -1,12 +1,15 @@
 import java.util.Scanner;
 public class StarWordApp {
 	
+	public static void main(String[] args) {
+	
 	//declare local variables
 	String word;
 	int method;
+	String answer = "yes";
 	
 	//declare objects
-	StarWord starWord = new StarWord();
+	StarWord myStar = new StarWord();
 	do {//input use do while loop
 		//input
 		Scanner sc = new Scanner(System.in);
@@ -18,27 +21,27 @@ public class StarWordApp {
 		method = sc.nextInt();
 		
 		//process
-		starWord.setWord(word);
+		myStar.setWord(word);
 
 		//output
 		//"The word: " + word + "with STARS compute method is" + starWord
 		
 		switch(method) {
 		case 1:
-			starWord.computeVowels();
-			System.out.println("The word: " + word + " with vowels method is: " + starWord.getStringBuffer());
+			myStar.computeVowels();
+			System.out.println("The word: " + word + " with vowels method is: " + myStar.getStringBuffer());
 			break;
 		case 2:
-			starWord.computeStars();
-			System.out.println("The word: " + word + " with stars method is: " + starWord.getStringBuffer());
+			myStar.computeStars();
+			System.out.println("The word: " + word + " with stars method is: " + myStar.getStringBuffer());
 			break;
 		case 3:
-			starWord.computePigLatin();
-			System.out.println("The word: " + word + " with Pig Latin method is: " + starWord.getStringBuffer());
+			myStar.computePigLatin();
+			System.out.println("The word: " + word + " with Pig Latin method is: " + myStar.getStringBuffer());
 			break;
 		case 4:
-			starWord.reverseWord();
-			System.out.println("The word: " + word + " with word reverse method is: " + starWord.getStringBuffer());
+			myStar.reverseWord();
+			System.out.println("The word: " + word + " with word reverse method is: " + myStar.getStringBuffer());
 			break;
 			default:
 				System.out.println("Please check your input");
@@ -46,7 +49,7 @@ public class StarWordApp {
 	
 		//"Do you wish to continue? y/n"
 		System.out.println("Do you wish to continue? Yes or No: ");
-		String answer = sc.next();
+		answer = sc.next();
 		
 	}while(answer.equalsIgnoreCase("yes")) ;
 	
